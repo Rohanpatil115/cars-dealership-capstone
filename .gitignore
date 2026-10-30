@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+server/db.sqlite3
+.env
+cookies.txt
