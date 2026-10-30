@@ -1,0 +1,16 @@
+
+C:\Users\TESUSER123\cars-dealership-capstone>curl -i -c cookies.txt -X POST -H "Content-Type: application/json"  -d "{\"username\":\"root\",\"password\":\"[REDACTED]\"}" http://127.0.0.1:8000/djangoapp/login/
+HTTP/1.1 200 OK
+Date: Fri, 30 Oct 2026 09:35:25 GMT
+Server: WSGIServer/0.2 CPython/3.14.0
+Content-Type: application/json
+X-Frame-Options: DENY
+Vary: Cookie
+Content-Length: 74
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+Set-Cookie:  csrftoken=c3oQwVXM8WWrUujOYdBN4TmlGcDg4MhP; expires=Fri, 29 Oct 2027 09:35:25 GMT; Max-Age=31449600; Path=/; SameSite=Lax
+Set-Cookie:  sessionid=mm2kd8anu7wbxlx4yy3xkestgbbwn26d; expires=Fri, 13 Nov 2026 09:35:25 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax
+
+{"message": "Login successful", "username": "root", "authenticated": true}
