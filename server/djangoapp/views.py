@@ -78,3 +78,40 @@ def logout_user(request):
         "username": username,
         "authenticated": False
     }, status=200)
+
+from .models import Dealer, Review
+
+
+def get_dealer_reviews(request, dealer_id):
+    if request.method != "GET":
+        return JsonResponse(
+            {"error": "Only GET requests are allowed"},
+            status=405
+        )
+
+    try:
+        dealer = Dealer.objects.get(id=dealer_id)
+    except Dealer.DoesNotExist:
+        return JsonResponse(
+            {"error": "Dealer not found"},
+            status=404
+        )
+
+    reviews = Review.objects.filter(dealer=dealer).order_by("-created_at")
+
+    review_data = [
+        {
+            "id": review.id,
+            "reviewer_name": review.reviewer_name,
+            "review": review.review_text,
+            "rating": review.rating,
+            "created_at": review.created_at.isoformat()
+        }
+        for review in reviews
+    ]
+
+    return JsonResponse({
+        "dealer_id": dealer.id,
+        "dealer_name": dealer.name,
+        "reviews": review_data
+    })
