@@ -1,0 +1,128 @@
+
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 16px;
+    background: linear-gradient(135deg, #101820, #263d50);
+    font-family: Arial, sans-serif;
+}
+
+.register-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 510px;
+    padding: 38px;
+    border-radius: 16px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+.register-brand {
+    color: #d99a24;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.register-brand span {
+    color: #142433;
+}
+
+.register-card h1 {
+    color: #142433;
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.register-subtitle {
+    text-align: center;
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+.register-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 18px;
+}
+
+.register-field label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #263746;
+    margin-bottom: 8px;
+}
+
+.register-field input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d8e0e7;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.register-field input:focus {
+    border-color: #d99a24;
+    box-shadow: 0 0 0 3px rgba(217, 154, 36, 0.12);
+}
+
+.register-row {
+    display: flex;
+    gap: 15px;
+}
+
+.register-button {
+    width: 100%;
+    background: #d99a24;
+    color: #142433;
+    border: none;
+    padding: 14px;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.register-button:hover {
+    background: #c38719;
+}
+
+.register-message {
+    color: #176b50;
+    font-size: 13px;
+    margin-top: 14px;
+    line-height: 1.5;
+}
+
+.register-footer {
+    text-align: center;
+    margin-top: 22px;
+    color: #718096;
+    font-size: 13px;
+}
+
+.register-footer a {
+    color: #bd8218;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    .register-card {
+        padding: 25px 20px;
+    }
+
+    .register-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
